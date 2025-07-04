@@ -24,7 +24,7 @@ export const SidebarNav = () => {
   ];
 
   return (
-    <div className="hidden lg:flex fixed left-4 top-4 bottom-4 w-64 bg-slate-900/95 backdrop-blur-sm rounded-lg border border-slate-700 z-50">
+    <div className="hidden lg:flex fixed left-4 top-4 bottom-4 w-58 bg-slate-900/95 backdrop-blur-sm rounded-lg border border-slate-700 z-50">
       <nav className="flex flex-col w-full p-4">
         {/* Logo/Brand */}
         <div className="flex items-center space-x-3 mb-8 pb-4 border-b border-slate-700">
