@@ -1,4 +1,3 @@
-
 import { Code2, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
@@ -31,7 +30,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 fixed top-0 left-0 right-0 z-50 mx-4 mt-4 rounded-lg">
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 fixed top-0 left-0 right-0 z-50 mx-4 mt-4 rounded-lg lg:hidden">
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -40,7 +39,7 @@ export const Header = () => {
             </div>
           </div>
           
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Hidden since we now use sidebar */}
           <nav className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-center space-x-8">
               {navItems.map((item) => (
@@ -55,7 +54,7 @@ export const Header = () => {
             </div>
           </nav>
           
-          {/* Mobile Menu */}
+          {/* Mobile Menu - Keep existing functionality */}
           <div className="md:hidden">
             <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <DropdownMenuTrigger asChild>

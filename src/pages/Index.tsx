@@ -1,5 +1,6 @@
 
 import { Header } from '@/components/Header';
+import { SidebarNav } from '@/components/SidebarNav';
 import { HomeSection } from '@/components/portfolio/HomeSection';
 import { AboutSection } from '@/components/portfolio/AboutSection';
 import { SkillsSection } from '@/components/portfolio/SkillsSection';
@@ -12,13 +13,18 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <HomeSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ExperienceSection />
-      <CodingProfilesSection />
-      <ContactSection />
+      <SidebarNav />
+      
+      {/* Main content with left margin on desktop to account for sidebar */}
+      <div className="lg:ml-72">
+        <HomeSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <CodingProfilesSection />
+        <ContactSection />
+      </div>
     </div>
   );
 };
