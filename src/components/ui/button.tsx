@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -18,10 +19,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        linkedin: "bg-[hsl(var(--linkedin))] text-[hsl(var(--linkedin-foreground))] hover:bg-[hsl(var(--linkedin))]/90 hover:scale-105 hover:shadow-lg hover:shadow-[hsl(var(--linkedin))]/25 active:scale-95 transform transition-all duration-200",
-        github: "bg-[hsl(var(--github))] text-[hsl(var(--github-foreground))] hover:bg-[hsl(var(--github))]/90 hover:scale-105 hover:shadow-lg hover:shadow-[hsl(var(--github))]/25 active:scale-95 transform transition-all duration-200",
-        email: "bg-[hsl(var(--email))] text-[hsl(var(--email-foreground))] hover:bg-[hsl(var(--email))]/90 hover:scale-105 hover:shadow-lg hover:shadow-[hsl(var(--email))]/25 active:scale-95 transform transition-all duration-200",
-        resume: "bg-[hsl(var(--resume))] text-[hsl(var(--resume-foreground))] hover:bg-[hsl(var(--resume))]/90 hover:scale-105 hover:shadow-lg hover:shadow-[hsl(var(--resume))]/25 active:scale-95 transform transition-all duration-200",
+        linkedin: "bg-[hsl(var(--linkedin))] text-[hsl(var(--linkedin-foreground))] hover:bg-[hsl(var(--linkedin))]/90 hover:scale-110 hover:shadow-xl hover:shadow-[hsl(var(--linkedin))]/40 active:scale-95 transform transition-all duration-300 hover:rotate-1 hover:-translate-y-1 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700",
+        github: "bg-[hsl(var(--github))] text-[hsl(var(--github-foreground))] hover:bg-[hsl(var(--github))]/90 hover:scale-110 hover:shadow-xl hover:shadow-[hsl(var(--github))]/40 active:scale-95 transform transition-all duration-300 hover:-rotate-1 hover:-translate-y-1 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700",
+        email: "bg-[hsl(var(--email))] text-[hsl(var(--email-foreground))] hover:bg-[hsl(var(--email))]/90 hover:scale-110 hover:shadow-xl hover:shadow-[hsl(var(--email))]/40 active:scale-95 transform transition-all duration-300 hover:rotate-1 hover:-translate-y-1 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 hover:animate-pulse",
+        resume: "bg-[hsl(var(--resume))] text-[hsl(var(--resume-foreground))] hover:bg-[hsl(var(--resume))]/90 hover:scale-110 hover:shadow-xl hover:shadow-[hsl(var(--resume))]/40 active:scale-95 transform transition-all duration-300 hover:-rotate-1 hover:-translate-y-1 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 hover:brightness-110",
       },
       size: {
         default: "h-10 px-4 py-2",
