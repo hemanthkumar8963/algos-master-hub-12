@@ -16,7 +16,7 @@ const Index = () => {
       <SidebarNav />
       
       {/* Main content with left margin on desktop to account for sidebar */}
-      <div className="lg:ml-64">
+      <div className="lg:ml-72">
         <HomeSection />
         <AboutSection />
         <SkillsSection />
