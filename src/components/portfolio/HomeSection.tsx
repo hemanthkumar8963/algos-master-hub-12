@@ -32,8 +32,8 @@ export const HomeSection = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button 
               asChild 
+              variant="linkedin"
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
             >
               <a href="https://www.linkedin.com/in/hemanth-kumar-somana-2029b5212/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <Linkedin className="h-5 w-5" />
@@ -43,9 +43,8 @@ export const HomeSection = () => {
             
             <Button 
               asChild 
-              variant="outline" 
+              variant="github"
               size="lg"
-              className="hover:bg-gray-50"
             >
               <a href="https://github.com/Hemanth-Kumar-Somana" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <Github className="h-5 w-5" />
@@ -55,9 +54,8 @@ export const HomeSection = () => {
             
             <Button 
               asChild 
-              variant="outline" 
+              variant="email"
               size="lg"
-              className="hover:bg-gray-50"
             >
               <a href="mailto:hemanthkumarsomana@gmail.com" className="flex items-center space-x-2">
                 <Mail className="h-5 w-5" />
@@ -67,9 +65,8 @@ export const HomeSection = () => {
             
             <Button 
               asChild 
-              variant="outline" 
+              variant="resume"
               size="lg"
-              className="hover:bg-gray-50"
             >
               <a href="https://drive.google.com/drive/folders/1UNQzAjpEFmiSDNKKjK1dDo6AJVDOk7ce?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <FileText className="h-5 w-5" />

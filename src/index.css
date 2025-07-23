@@ -36,6 +36,16 @@
 
     --radius: 0.5rem;
 
+    /* Social platform colors */
+    --linkedin: 201 100% 35%;
+    --linkedin-foreground: 0 0% 100%;
+    --github: 220 13% 18%;
+    --github-foreground: 0 0% 100%;
+    --email: 37 90% 51%;
+    --email-foreground: 0 0% 100%;
+    --resume: 142 71% 45%;
+    --resume-foreground: 0 0% 100%;
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
