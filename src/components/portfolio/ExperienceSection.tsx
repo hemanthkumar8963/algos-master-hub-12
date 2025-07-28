@@ -71,10 +71,17 @@ export const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-slate-950 to-blue-950">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-20 bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 relative overflow-hidden">
+      {/* Floating certification badges */}
+      <div className="absolute inset-0">
+        <div className="absolute top-16 right-16 w-28 h-28 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-16 left-16 w-36 h-36 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
+        <div className="absolute top-1/2 right-1/3 w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse transform hover:scale-105 transition-transform duration-500">
             Experience & Certifications
           </h2>
           
@@ -82,13 +89,14 @@ export const ExperienceSection = () => {
             {certifications.map((cert, index) => (
               <div 
                 key={index} 
-                className="group bg-card rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.05] transition-all duration-500 overflow-hidden border border-border hover:border-blue-300 hover:bg-gradient-to-br hover:from-blue-950 hover:via-background hover:to-purple-950 cursor-pointer"
+                className="group bg-card rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.05] transition-all duration-500 overflow-hidden border border-border hover:border-cyan-400 hover:bg-gradient-to-br hover:from-blue-950 hover:via-slate-900 hover:to-purple-950 cursor-pointer transform hover:-translate-y-4 animate-fade-in"
+                style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="p-6">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
-                        <div className="w-12 h-12 rounded-lg bg-muted group-hover:bg-blue-900 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+                        <div className="w-12 h-12 rounded-lg bg-muted group-hover:bg-gradient-to-r group-hover:from-cyan-900 group-hover:to-blue-900 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-xl group-hover:shadow-cyan-500/50">
                           {cert.profileImage ? (
                             <img 
                               src={cert.profileImage} 
@@ -100,7 +108,7 @@ export const ExperienceSection = () => {
                           )}
                         </div>
                         <div>
-                          <h3 className="text-xl font-semibold text-card-foreground group-hover:text-blue-300 transition-colors duration-300 group-hover:scale-105 transform">{cert.organization}</h3>
+                          <h3 className="text-xl font-semibold text-card-foreground group-hover:text-cyan-300 transition-colors duration-300 group-hover:scale-105 transform">{cert.organization}</h3>
                           {cert.program && <p className="text-muted-foreground group-hover:text-card-foreground font-medium transition-colors duration-300">{cert.program}</p>}
                         </div>
                       </div>
