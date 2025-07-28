@@ -43,7 +43,7 @@ export const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -54,7 +54,7 @@ export const ProjectsSection = () => {
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 border-gray-200 hover:border-blue-400 transform hover:-translate-y-4 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-blue-50 hover:via-white hover:to-purple-50 cursor-pointer"
+                className="group bg-card rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 border-border hover:border-blue-400 transform hover:-translate-y-4 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-blue-950 hover:via-background hover:to-purple-950 cursor-pointer"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -66,15 +66,15 @@ export const ProjectsSection = () => {
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
                 </div>
                 
-                <div className="p-4 sm:p-6 border-t-2 border-gray-100 group-hover:border-blue-200">
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-700 transition-all duration-300 group-hover:scale-105 transform">{project.title}</h3>
-                  <p className="text-gray-600 group-hover:text-gray-700 mb-4 leading-relaxed text-sm sm:text-base transition-colors duration-300">{project.description}</p>
+                <div className="p-4 sm:p-6 border-t-2 border-border group-hover:border-blue-400">
+                  <h3 className="text-lg sm:text-xl font-semibold text-card-foreground mb-3 group-hover:text-blue-300 transition-all duration-300 group-hover:scale-105 transform">{project.title}</h3>
+                  <p className="text-muted-foreground group-hover:text-card-foreground mb-4 leading-relaxed text-sm sm:text-base transition-colors duration-300">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex}
-                        className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs sm:text-sm font-medium group-hover:bg-gradient-to-r group-hover:from-blue-200 group-hover:to-purple-200 group-hover:text-blue-900 group-hover:scale-110 group-hover:shadow-md transition-all duration-300 cursor-default transform hover:rotate-1"
+                        className="px-2 sm:px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs sm:text-sm font-medium group-hover:bg-gradient-to-r group-hover:from-blue-800 group-hover:to-purple-800 group-hover:text-blue-100 group-hover:scale-110 group-hover:shadow-md transition-all duration-300 cursor-default transform hover:rotate-1"
                       >
                         {skill}
                       </span>
@@ -86,7 +86,7 @@ export const ProjectsSection = () => {
                       variant="outline" 
                       size="sm" 
                       asChild
-                      className="flex items-center space-x-2 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300 transform hover:scale-110 hover:shadow-xl group-hover:border-blue-400 group-hover:text-blue-700 text-xs sm:text-sm"
+                      className="flex items-center space-x-2 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300 transform hover:scale-110 hover:shadow-xl group-hover:border-blue-400 group-hover:text-blue-300 text-xs sm:text-sm"
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="h-3 w-3 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:rotate-12" />
@@ -100,9 +100,9 @@ export const ProjectsSection = () => {
           </div>
           
           <div className="text-center">
-            <div className="group bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 sm:p-8 border-2 border-blue-100 hover:border-blue-300 hover:from-blue-100 hover:to-purple-100 transition-all duration-500 hover:shadow-lg cursor-pointer">
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 group-hover:text-blue-700 mb-4 transition-colors duration-300">Want to see more?</h3>
-              <p className="text-gray-600 group-hover:text-gray-700 mb-6 text-sm sm:text-base transition-colors duration-300">Check out my GitHub profile for additional projects and contributions.</p>
+            <div className="group bg-gradient-to-r from-blue-950 to-purple-950 rounded-xl p-6 sm:p-8 border-2 border-blue-900 hover:border-blue-700 hover:from-blue-900 hover:to-purple-900 transition-all duration-500 hover:shadow-lg cursor-pointer">
+              <h3 className="text-xl sm:text-2xl font-semibold text-foreground group-hover:text-blue-300 mb-4 transition-colors duration-300">Want to see more?</h3>
+              <p className="text-muted-foreground group-hover:text-foreground mb-6 text-sm sm:text-base transition-colors duration-300">Check out my GitHub profile for additional projects and contributions.</p>
               <Button asChild className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transform hover:scale-110 hover:shadow-xl transition-all duration-300">
                 <a href="https://github.com/Hemanth-Kumar-Somana/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                   <Github className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 group-hover:rotate-12" />

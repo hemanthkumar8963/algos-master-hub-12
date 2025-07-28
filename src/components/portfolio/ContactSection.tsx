@@ -47,7 +47,7 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -55,10 +55,10 @@ export const ContactSection = () => {
           </h2>
           
           <div className="text-center mb-12">
-            <p className="text-xl text-gray-600 mb-6">
+            <p className="text-xl text-muted-foreground mb-6">
               I'm always open to discussing new opportunities, collaborations, or just having a chat about technology!
             </p>
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-muted-foreground">
               Feel free to reach out through any of the channels below.
             </p>
           </div>
@@ -70,30 +70,30 @@ export const ContactSection = () => {
                 href={contact.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-300 transform hover:-translate-y-4 hover:scale-[1.08] hover:bg-gradient-to-br hover:from-blue-50 hover:via-white hover:to-purple-50 cursor-pointer"
+                className="group bg-card rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border hover:border-blue-300 transform hover:-translate-y-4 hover:scale-[1.08] hover:bg-gradient-to-br hover:from-blue-950 hover:via-background hover:to-purple-950 cursor-pointer"
               >
                 <div className="flex flex-col items-center text-center space-y-3">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${contact.color} group-hover:bg-gradient-to-r group-hover:${contact.hoverColor} flex items-center justify-center text-white group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 group-hover:shadow-xl`}>
                     {contact.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-300 group-hover:scale-105 transform">
+                    <h3 className="text-lg font-semibold text-card-foreground group-hover:text-blue-300 transition-colors duration-300 group-hover:scale-105 transform">
                       {contact.label}
                     </h3>
-                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-muted-foreground group-hover:text-card-foreground transition-colors duration-300">
                       {contact.value}
                     </p>
                   </div>
-                  <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300" />
+                  <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-blue-400 group-hover:scale-110 transition-all duration-300" />
                 </div>
               </a>
             ))}
           </div>
           
           <div className="text-center">
-            <div className="group bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 border-2 border-blue-100 hover:border-blue-300 hover:from-blue-100 hover:to-purple-100 transition-all duration-500 hover:shadow-lg cursor-pointer">
-              <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-blue-700 mb-4 transition-colors duration-300">Ready to collaborate?</h3>
-              <p className="text-gray-600 group-hover:text-gray-700 mb-6 max-w-2xl mx-auto transition-colors duration-300">
+            <div className="group bg-gradient-to-r from-blue-950 to-purple-950 rounded-xl p-8 border-2 border-blue-900 hover:border-blue-700 hover:from-blue-900 hover:to-purple-900 transition-all duration-500 hover:shadow-lg cursor-pointer">
+              <h3 className="text-2xl font-semibold text-foreground group-hover:text-blue-300 mb-4 transition-colors duration-300">Ready to collaborate?</h3>
+              <p className="text-muted-foreground group-hover:text-foreground mb-6 max-w-2xl mx-auto transition-colors duration-300">
                 Whether you have a project in mind, want to discuss opportunities, or just want to connect, 
                 I'd love to hear from you. Let's build something amazing together!
               </p>

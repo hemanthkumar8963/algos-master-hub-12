@@ -31,7 +31,7 @@ export const CodingProfilesSection = () => {
   ];
 
   return (
-    <section id="coding-profiles" className="py-20 bg-white">
+    <section id="coding-profiles" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -42,7 +42,7 @@ export const CodingProfilesSection = () => {
             {codingProfiles.map((profile, index) => (
               <div 
                 key={index} 
-                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-blue-300 hover:bg-gradient-to-br hover:from-blue-50 hover:via-white hover:to-purple-50 transform hover:scale-[1.08] hover:-translate-y-2 cursor-pointer"
+                className="group bg-card rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border hover:border-blue-300 hover:bg-gradient-to-br hover:from-blue-950 hover:via-background hover:to-purple-950 transform hover:scale-[1.08] hover:-translate-y-2 cursor-pointer"
               >
                 <div className="p-6">
                   <div className="flex items-center space-x-4 mb-4">
@@ -54,15 +54,15 @@ export const CodingProfilesSection = () => {
                       />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-300 group-hover:scale-105 transform">{profile.platform}</h3>
-                      <div className="flex items-center space-x-1 text-sm text-gray-500 group-hover:text-blue-500 transition-colors duration-300">
+                      <h3 className="text-xl font-semibold text-card-foreground group-hover:text-blue-300 transition-colors duration-300 group-hover:scale-105 transform">{profile.platform}</h3>
+                      <div className="flex items-center space-x-1 text-sm text-muted-foreground group-hover:text-blue-400 transition-colors duration-300">
                         <Trophy className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
                         <span>Coding Platform</span>
                       </div>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 group-hover:text-gray-700 mb-6 leading-relaxed transition-colors duration-300">{profile.description}</p>
+                  <p className="text-muted-foreground group-hover:text-card-foreground mb-6 leading-relaxed transition-colors duration-300">{profile.description}</p>
                   
                   <Button 
                     asChild 
@@ -80,9 +80,9 @@ export const CodingProfilesSection = () => {
           </div>
           
           <div className="text-center">
-            <div className="group bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 hover:from-blue-100 hover:to-purple-100 transition-all duration-500 hover:shadow-lg cursor-pointer">
-              <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-blue-700 mb-4 transition-colors duration-300">Problem Solving & Competitive Programming</h3>
-              <p className="text-gray-600 group-hover:text-gray-700 max-w-2xl mx-auto transition-colors duration-300">
+            <div className="group bg-gradient-to-r from-blue-950 to-purple-950 rounded-xl p-8 hover:from-blue-900 hover:to-purple-900 transition-all duration-500 hover:shadow-lg cursor-pointer">
+              <h3 className="text-2xl font-semibold text-foreground group-hover:text-blue-300 mb-4 transition-colors duration-300">Problem Solving & Competitive Programming</h3>
+              <p className="text-muted-foreground group-hover:text-foreground max-w-2xl mx-auto transition-colors duration-300">
                 I actively practice coding problems and participate in competitive programming to enhance my algorithmic thinking and problem-solving skills. 
                 These platforms help me stay sharp and improve my coding efficiency.
               </p>

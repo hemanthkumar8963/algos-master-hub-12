@@ -71,7 +71,7 @@ export const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section id="experience" className="py-20 bg-gradient-to-br from-slate-950 to-blue-950">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -82,13 +82,13 @@ export const ExperienceSection = () => {
             {certifications.map((cert, index) => (
               <div 
                 key={index} 
-                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.05] transition-all duration-500 overflow-hidden border border-gray-100 hover:border-blue-300 hover:bg-gradient-to-br hover:from-blue-50 hover:via-white hover:to-purple-50 cursor-pointer"
+                className="group bg-card rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.05] transition-all duration-500 overflow-hidden border border-border hover:border-blue-300 hover:bg-gradient-to-br hover:from-blue-950 hover:via-background hover:to-purple-950 cursor-pointer"
               >
                 <div className="p-6">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
-                        <div className="w-12 h-12 rounded-lg bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+                        <div className="w-12 h-12 rounded-lg bg-muted group-hover:bg-blue-900 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
                           {cert.profileImage ? (
                             <img 
                               src={cert.profileImage} 
@@ -96,18 +96,18 @@ export const ExperienceSection = () => {
                               className="w-full h-full object-contain p-1 filter grayscale group-hover:grayscale-0 transition-all duration-300"
                             />
                           ) : (
-                            <Award className="h-6 w-6 text-gray-600 group-hover:text-blue-600 transition-colors duration-300" />
+                            <Award className="h-6 w-6 text-muted-foreground group-hover:text-blue-400 transition-colors duration-300" />
                           )}
                         </div>
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-300 group-hover:scale-105 transform">{cert.organization}</h3>
-                          {cert.program && <p className="text-gray-600 group-hover:text-gray-700 font-medium transition-colors duration-300">{cert.program}</p>}
+                          <h3 className="text-xl font-semibold text-card-foreground group-hover:text-blue-300 transition-colors duration-300 group-hover:scale-105 transform">{cert.organization}</h3>
+                          {cert.program && <p className="text-muted-foreground group-hover:text-card-foreground font-medium transition-colors duration-300">{cert.program}</p>}
                         </div>
                       </div>
                       
                       <div className="flex items-center space-x-2 mb-3">
-                        <Calendar className="h-4 w-4 text-gray-500 group-hover:text-blue-500 transition-colors duration-300" />
-                        <span className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{cert.period}</span>
+                        <Calendar className="h-4 w-4 text-muted-foreground group-hover:text-blue-400 transition-colors duration-300" />
+                        <span className="text-muted-foreground group-hover:text-card-foreground transition-colors duration-300">{cert.period}</span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${cert.color} group-hover:bg-gradient-to-r group-hover:${cert.hoverColor} text-white group-hover:scale-110 transition-all duration-300 group-hover:shadow-md`}>
                           {cert.type}
                         </span>
@@ -116,12 +116,12 @@ export const ExperienceSection = () => {
                   </div>
                   
                   {cert.singleCertificate ? (
-                    <div className="flex items-center justify-center p-4 bg-gray-50 group-hover:bg-blue-50 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                    <div className="flex items-center justify-center p-4 bg-muted group-hover:bg-blue-950 rounded-lg hover:bg-muted transition-all duration-300">
                       <Button 
                         onClick={() => handleViewCredential(cert.program || cert.organization, cert.certificateUrl)}
                         variant="outline"
                         size="lg"
-                        className="flex items-center space-x-2 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300 transform hover:scale-110 hover:shadow-xl group-hover:border-blue-400 group-hover:text-blue-700 group"
+                        className="flex items-center space-x-2 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300 transform hover:scale-110 hover:shadow-xl group-hover:border-blue-400 group-hover:text-blue-300 group"
                       >
                         <Eye className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
                         <span>View Credential</span>
@@ -132,17 +132,17 @@ export const ExperienceSection = () => {
                       {cert.courses.map((course, courseIndex) => (
                         <div 
                           key={courseIndex} 
-                          className="flex items-center justify-between p-4 bg-gray-50 group-hover:bg-blue-50 rounded-lg hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-md cursor-pointer"
+                          className="flex items-center justify-between p-4 bg-muted group-hover:bg-blue-950 rounded-lg hover:bg-muted transition-all duration-300 hover:scale-[1.02] hover:shadow-md cursor-pointer"
                         >
                           <div className="flex items-center space-x-3">
-                            <div className="w-2 h-2 bg-blue-500 group-hover:bg-blue-600 rounded-full group-hover:scale-150 transition-all duration-300"></div>
-                            <span className="text-gray-700 group-hover:text-blue-700 font-medium transition-colors duration-300">{course.name}</span>
+                            <div className="w-2 h-2 bg-blue-500 group-hover:bg-blue-400 rounded-full group-hover:scale-150 transition-all duration-300"></div>
+                            <span className="text-card-foreground group-hover:text-blue-300 font-medium transition-colors duration-300">{course.name}</span>
                           </div>
                           <Button 
                             onClick={() => handleViewCredential(course.name, course.certificateUrl)}
                             variant="outline"
                             size="sm"
-                            className="flex items-center space-x-2 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300 transform hover:scale-110 hover:shadow-lg group-hover:border-blue-400 group-hover:text-blue-700 group"
+                            className="flex items-center space-x-2 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300 transform hover:scale-110 hover:shadow-lg group-hover:border-blue-400 group-hover:text-blue-300 group"
                           >
                             <Eye className="h-4 w-4 transition-transform duration-300 group-hover:rotate-12" />
                             <span>View</span>
@@ -157,9 +157,9 @@ export const ExperienceSection = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <div className="group bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 border-2 border-blue-100 hover:border-blue-300 hover:from-blue-100 hover:to-purple-100 transition-all duration-500 hover:shadow-lg cursor-pointer">
-              <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-blue-700 mb-4 transition-colors duration-300">Continuous Learning Journey</h3>
-              <p className="text-gray-600 group-hover:text-gray-700 max-w-2xl mx-auto transition-colors duration-300">
+            <div className="group bg-gradient-to-r from-blue-950 to-purple-950 rounded-xl p-8 border-2 border-blue-900 hover:border-blue-700 hover:from-blue-900 hover:to-purple-900 transition-all duration-500 hover:shadow-lg cursor-pointer">
+              <h3 className="text-2xl font-semibold text-foreground group-hover:text-blue-300 mb-4 transition-colors duration-300">Continuous Learning Journey</h3>
+              <p className="text-muted-foreground group-hover:text-foreground max-w-2xl mx-auto transition-colors duration-300">
                 I believe in continuous learning and staying updated with the latest technologies and industry trends. 
                 These certifications represent my commitment to professional growth and technical excellence.
               </p>
