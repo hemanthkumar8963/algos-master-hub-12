@@ -11,7 +11,7 @@ export const HomeSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center pt-24">
+    <section id="home" className="min-h-screen bg-gradient-to-br from-blue-950 via-background to-purple-950 flex items-center pt-24">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
