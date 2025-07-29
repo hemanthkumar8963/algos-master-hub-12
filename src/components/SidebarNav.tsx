@@ -26,7 +26,7 @@ export const SidebarNav = () => {
   return (
     <div className="hidden md:block fixed top-4 left-0 right-0 z-50">
       <div className="grid grid-cols-12 px-4">
-        <div className="col-span-12 md:col-start-3 md:col-end-11">
+        <div className="col-span-12 md:col-start-2 md:col-end-12 lg:col-start-3 lg:col-end-11">
           <nav className="bg-slate-900/95 backdrop-blur-sm rounded-lg border border-slate-700 p-4">
             <div className="flex items-center justify-between">
               {/* Logo Icon */}
