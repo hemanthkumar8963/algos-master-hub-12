@@ -14,11 +14,11 @@ export const ProjectsSection = () => {
       hoverGradient: "from-red-600 to-pink-600"
     },
     {
-      title: "Password Manager",
-      description: "Secure Vault for Your Credentials with advanced encryption and user-friendly interface for managing passwords safely.",
-      skills: ["MERN Stack", "Security", "Encryption"],
-      github: "https://github.com/Hemanth-Kumar-Somana/Password-Manager",
-      image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=500&h=300&fit=crop",
+      title: "Part Time Job Finder",
+      description: "Connects students and employers for part-time jobs with features like job postings, pay negotiation, confirmations, wallet tracking, real-time alerts, and role-based dashboards, ensuring a seamless, efficient experience from application to payment on a single unified platform.",
+      skills: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
+      github: "https://github.com/Hemanth-Kumar-Somana/Part-Time-Job-FInder-For-Student",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=500&h=300&fit=crop",
       gradient: "from-blue-500 to-cyan-500",
       hoverGradient: "from-blue-600 to-cyan-600"
     },
@@ -30,6 +30,15 @@ export const ProjectsSection = () => {
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&h=300&fit=crop",
       gradient: "from-green-500 to-emerald-500",
       hoverGradient: "from-green-600 to-emerald-600"
+    },
+    {
+      title: "Travel Companion",
+      description: "Travel Companion App with personalized trip planning, budgeting, and saving features. Included city-wise modules (e.g., Mumbai, Hyderabad) and a new Seasonal Trips feature like Monsoon Kerala, where users select destinations, travel mode (car/bus), and get a tailored itinerary with real-time budget and editing options.",
+      skills: ["React", "JavaScript", "Travel Planning", "Budget Management"],
+      github: "https://github.com/Hemanth-Kumar-Somana/SmartTrip-Your-Complete-Travel-Companion",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop",
+      gradient: "from-orange-500 to-amber-500",
+      hoverGradient: "from-orange-600 to-amber-600"
     },
     {
       title: "Daily Email Summarizer",
