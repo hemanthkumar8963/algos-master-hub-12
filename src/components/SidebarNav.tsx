@@ -29,15 +29,12 @@ export const SidebarNav = () => {
         <div className="col-span-12 md:col-start-3 md:col-end-11">
           <nav className="bg-slate-900/95 backdrop-blur-sm rounded-lg border border-slate-700 p-4">
             <div className="flex items-center justify-between">
-              {/* Logo/Brand */}
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Code className="h-5 w-5 text-white" />
-                </div>
-                <span className="text-white font-semibold">Portfolio</span>
+              {/* Logo Icon */}
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <Code className="h-5 w-5 text-white" />
               </div>
 
-              {/* Navigation Items */}
+              {/* Navigation Items - Centered */}
               <div className="flex items-center space-x-1">
                 {navItems.map((item) => {
                   const Icon = item.icon;
@@ -62,10 +59,8 @@ export const SidebarNav = () => {
                 })}
               </div>
 
-              {/* Copyright */}
-              <div className="text-xs text-slate-500">
-                © 2024 Hemanth Kumar
-              </div>
+              {/* Empty div for balance */}
+              <div className="w-8"></div>
             </div>
           </nav>
         </div>
