@@ -41,13 +41,6 @@ export const SkillsSection = () => {
       hoverColor: "from-orange-600 to-red-600"
     },
     {
-      title: "Cybersecurity",
-      icon: <Shield className="h-8 w-8" />,
-      skills: ["Threat Detection", "Incident Response", "Risk Management", "Security Analysis", "Vulnerability Assessment"],
-      color: "from-red-500 to-pink-500",
-      hoverColor: "from-red-600 to-pink-600"
-    },
-    {
       title: "Tools & Technologies",
       icon: <Wrench className="h-8 w-8" />,
       skills: ["Git", "GitHub", "VS Code", "MERN Stack", "RESTful APIs"],

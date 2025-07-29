@@ -24,51 +24,52 @@ export const SidebarNav = () => {
   ];
 
   return (
-    <div className="hidden lg:flex fixed left-4 top-4 bottom-4 w-64 bg-slate-900/95 backdrop-blur-sm rounded-lg border border-slate-700 z-50">
-      <nav className="flex flex-col w-full p-4">
-        {/* Logo/Brand */}
-        <div className="flex items-center space-x-3 mb-8 pb-4 border-b border-slate-700">
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-            <Code className="h-6 w-6 text-white" />
-          </div>
-          <span className="text-white font-semibold text-lg">Portfolio</span>
-        </div>
+    <div className="hidden md:block fixed top-4 left-0 right-0 z-50">
+      <div className="grid grid-cols-12 px-4">
+        <div className="col-span-12 md:col-start-3 md:col-end-11">
+          <nav className="bg-slate-900/95 backdrop-blur-sm rounded-lg border border-slate-700 p-4">
+            <div className="flex items-center justify-between">
+              {/* Logo/Brand */}
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Code className="h-5 w-5 text-white" />
+                </div>
+                <span className="text-white font-semibold">Portfolio</span>
+              </div>
 
-        {/* Navigation Items */}
-        <div className="flex flex-col space-y-2">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeSection === item.id;
-            
-            return (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`flex items-center space-x-4 px-4 py-3 rounded-lg transition-all duration-200 group ${
-                  isActive 
-                    ? 'bg-slate-800 text-white' 
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
-                }`}
-              >
-                <Icon className={`h-5 w-5 transition-colors duration-200 ${
-                  isActive ? 'text-blue-400' : 'text-slate-400 group-hover:text-blue-400'
-                }`} />
-                <span className="font-medium">{item.label}</span>
-                {isActive && (
-                  <div className="ml-auto w-1 h-6 bg-blue-400 rounded-full"></div>
-                )}
-              </button>
-            );
-          })}
-        </div>
+              {/* Navigation Items */}
+              <div className="flex items-center space-x-1">
+                {navItems.map((item) => {
+                  const Icon = item.icon;
+                  const isActive = activeSection === item.id;
+                  
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 group ${
+                        isActive 
+                          ? 'bg-slate-800 text-white' 
+                          : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                      }`}
+                    >
+                      <Icon className={`h-4 w-4 transition-colors duration-200 ${
+                        isActive ? 'text-blue-400' : 'text-slate-400 group-hover:text-blue-400'
+                      }`} />
+                      <span className="font-medium text-sm">{item.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
 
-        {/* Bottom Section */}
-        <div className="mt-auto pt-4 border-t border-slate-700">
-          <div className="text-xs text-slate-500 text-center">
-            © 2024 Hemanth Kumar
-          </div>
+              {/* Copyright */}
+              <div className="text-xs text-slate-500">
+                © 2024 Hemanth Kumar
+              </div>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     </div>
   );
 };
