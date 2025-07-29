@@ -30,7 +30,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 fixed top-0 left-0 right-0 z-50 mx-4 mt-4 rounded-lg lg:hidden">
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 fixed top-0 left-0 right-0 z-50 mx-4 mt-4 rounded-lg md:hidden">
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
