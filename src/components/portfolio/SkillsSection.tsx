@@ -60,15 +60,15 @@ export const SkillsSection = () => {
     <section id="skills" className="py-20 bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 relative overflow-hidden">
       {/* Floating skill particles */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-20 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
-        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-lg animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-20 h-20 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-lg animate-pulse delay-700"></div>
+        <div className="absolute top-10 left-20 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-xl animate-bounce" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-lg animate-bounce" style={{ animationDuration: '2.5s', animationDelay: '0.5s' }}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-20 h-20 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-lg animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '2s' }}></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse transform hover:scale-105 transition-transform duration-500">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-fade-in transform hover:scale-105 transition-transform duration-500">
             Skills & Technologies
           </h2>
           
@@ -86,7 +86,7 @@ export const SkillsSection = () => {
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-card-foreground group-hover:text-cyan-300 transition-colors duration-300 group-hover:scale-105 transform">{category.title}</h3>
                   {category.level && (
-                    <span className="px-2 py-1 bg-gradient-to-r from-blue-900 to-purple-900 text-blue-100 rounded-full text-xs font-medium group-hover:bg-gradient-to-r group-hover:from-cyan-800 group-hover:to-blue-800 group-hover:text-cyan-50 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 animate-pulse">
+                    <span className="px-2 py-1 bg-gradient-to-r from-blue-900 to-purple-900 text-blue-100 rounded-full text-xs font-medium group-hover:bg-gradient-to-r group-hover:from-cyan-800 group-hover:to-blue-800 group-hover:text-cyan-50 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 animate-fade-in">
                       {category.level}
                     </span>
                   )}
@@ -96,8 +96,8 @@ export const SkillsSection = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <span 
                       key={skillIndex}
-                      className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm font-medium group-hover:bg-gradient-to-r group-hover:from-cyan-800 group-hover:to-purple-800 group-hover:text-cyan-100 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-current/50 transition-all duration-300 cursor-default transform hover:rotate-2 animate-pulse"
-                      style={{ animationDelay: `${skillIndex * 100}ms` }}
+                      className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm font-medium group-hover:bg-gradient-to-r group-hover:from-cyan-800 group-hover:to-purple-800 group-hover:text-cyan-100 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-current/50 transition-all duration-300 cursor-default transform hover:rotate-2 animate-fade-in"
+                      style={{ animationDelay: `${(index * 150) + (skillIndex * 50)}ms` }}
                     >
                       {skill}
                     </span>
