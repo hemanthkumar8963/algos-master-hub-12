@@ -48,6 +48,15 @@ export const ProjectsSection = () => {
       image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=500&h=300&fit=crop",
       gradient: "from-purple-500 to-violet-500",
       hoverGradient: "from-purple-600 to-violet-600"
+    },
+    {
+      title: "Sorting Algorithm Visualizer",
+      description: "A comprehensive Python application that provides interactive visualizations for popular sorting algorithms. This tool helps students and developers understand how different sorting algorithms work through step-by-step visual demonstrations.",
+      skills: ["Python", "Algorithm Visualization", "Educational Technology", "Data Structures"],
+      github: "https://github.com/Hemanth-Kumar-Somana/Sorting-Algorithm-Visualizer",
+      image: "https://images.unsplash.com/photo-1509966756634-9c23dd6e6815?w=500&h=300&fit=crop",
+      gradient: "from-indigo-500 to-blue-500",
+      hoverGradient: "from-indigo-600 to-blue-600"
     }
   ];
 
