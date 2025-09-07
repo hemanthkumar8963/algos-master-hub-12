@@ -34,7 +34,7 @@ export const Header = () => {
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <h1 className="text-xl font-bold text-white">Hemanth Kumar Portfolio</h1>
+            {/* Empty space where logo was */}
           </div>
           
           {/* Desktop Navigation - Hidden since we now use sidebar */}

@@ -29,8 +29,8 @@ export const SidebarNav = () => {
         <div className="col-span-12 md:col-start-2 md:col-end-12 lg:col-start-3 lg:col-end-11">
           <nav className="bg-slate-900/95 backdrop-blur-sm rounded-lg border border-slate-700 p-4">
             <div className="flex items-center justify-between">
-              {/* Portfolio Title */}
-              <h1 className="text-lg font-bold text-white">Hemanth Kumar Portfolio</h1>
+              {/* Empty space for balance */}
+              <div className="w-8"></div>
 
               {/* Navigation Items - Centered */}
               <div className="flex items-center space-x-1">
